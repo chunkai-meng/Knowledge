@@ -238,6 +238,7 @@ div.tocify {
 <ul>
 <li>head(data.df, 5)/tail 查看变量、值的类型</li>
 <li>pairs20x(data.df[,2:5]) 为数据帧绘制直方图（对角线）和散点图（右上角）</li>
+<li>没有把时间放进去研究的时候</li>
 <li>plot(data.df, which = 1) 查看残值分布，constant and with no trend</li>
 <li>normcheck(lm.fit)</li>
 <li>cooks20x(lm.fit) no influential outlier</li>
@@ -245,6 +246,24 @@ div.tocify {
 <li>refit.fit = lm(log(y)~x, data.df)</li>
 <li>summary(lm.fit)</li>
 <li>查看残值随自变量的分布趋势</li>
+<li>把时间放进去一起研究的时候残值图看起来更像随机分布在0附近了。可见年顺序在时间序列分析中的作用。</li>
+</ul>
+<p><strong>时间序列的数据结构</strong></p>
+<ul>
+<li>随着时间记录下来的响应变量值</li>
+<li>以及一系列在同样时间点记录下来的解释变量（表示为：<span class="math inline">\(X_{t1},X_{t2},X_{t3},...,X_{tk},\)</span>)
+<ul>
+<li>我们将用它们解释相应变量的行为，或者预测相应变量未来的值。</li>
+</ul></li>
+<li>在金融和经济领域，我们通常关心股票市场、消费价格等随时间的变化。</li>
+<li>这类变量的观察值常常以指数形式出现：
+<ul>
+<li>消费价格指数 CPI</li>
+<li>交易权重指数 TWI</li>
+<li>股指 NZSX50</li>
+</ul></li>
+<li>附带解释变量的观察值 时间段 观察值 解释变量 <span class="math display">\[1       Y_i       X_{11}  \]</span><br />
+2 . . . t . . . <span class="math display">\[T\]</span></li>
 </ul>
 <p>
 季节性和循环的区别<a href="time-series.html">时间序列</a>。
