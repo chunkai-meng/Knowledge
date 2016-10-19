@@ -220,21 +220,25 @@ div.tocify {
 
 
 <pre><code>## Loading required package: s20x</code></pre>
-<div class="section level3">
-<h3><a href="index.html">首页</a></h3>
+<div class="section level1">
+<h1><a href="index.html">首页</a></h1>
 </div>
-<div class="section level3">
-<h3>时间序列</h3>
-<div class="section level4">
-<h4>介绍</h4>
-<p><strong>时间序列分析：</strong></p>
+<div class="section level1">
+<h1>时间序列</h1>
+</div>
+<div class="section level1">
+<h1>介绍</h1>
+<div class="section level2">
+<h2>时间序列分析：</h2>
 <ul>
 <li>一个时间序列由在连续递增的时间上对数据的收集、重新排序和观察组成。</li>
 <li>时间间隔相等：时、日、月、季度、周年等</li>
 <li>时间序列的数据是有序的，不像回归，这里数据的顺序很关键</li>
 <li>注意，时间是有方向的，如果过去能够影响将来，那么观察值就不是相互独立的。</li>
 </ul>
-<p><strong>研究方法</strong></p>
+</div>
+<div class="section level2">
+<h2>研究方法</h2>
 <ul>
 <li>head(data.df, 5)/tail 查看变量、值的类型</li>
 <li>pairs20x(data.df[,2:5]) 为数据帧绘制直方图（对角线）和散点图（右上角）</li>
@@ -248,7 +252,9 @@ div.tocify {
 <li>查看残值随自变量的分布趋势</li>
 <li>把时间放进去一起研究的时候残值图看起来更像随机分布在0附近了。可见年顺序在时间序列分析中的作用。</li>
 </ul>
-<p><strong>时间序列的数据结构</strong></p>
+</div>
+<div class="section level2">
+<h2>时间序列的数据结构</h2>
 <ul>
 <li>随着时间记录下来的响应变量值</li>
 <li>以及一系列在同样时间点记录下来的解释变量（表示为：<span class="math inline">\(X_{t1},X_{t2},X_{t3},...,X_{tk},\)</span>)
@@ -262,9 +268,45 @@ div.tocify {
 <li>交易权重指数 TWI</li>
 <li>股指 NZSX50</li>
 </ul></li>
-<li>附带解释变量的观察值 时间段 观察值 解释变量 <span class="math display">\[1       Y_i       X_{11}  \]</span><br />
-2 . . . t . . . <span class="math display">\[T\]</span></li>
+<li>附带解释变量的观察值<br />
+<span class="math inline">\(时间段 \quad 观察值 \quad 解释变量\)</span><br />
+<span class="math inline">\(\quad 1 \qquad Y_1 \qquad X_{11} \quad X_{12} \quad \cdots \quad X_{1k}\)</span><br />
+<span class="math inline">\(\quad 2 \qquad Y_2 \qquad X_{21} \quad X_{22} \quad \cdots \quad X_{2k}\)</span><br />
+<span class="math inline">\(\quad \vdots \qquad \vdots \qquad \quad \vdots \qquad \vdots \quad \; \vdots \qquad \vdots\)</span><br />
+<span class="math inline">\(\quad t \qquad Y_t \; \qquad X_{t1} \; \quad X_{t2} \quad \cdots \quad X_{tk}\)</span><br />
+<span class="math inline">\(\quad \vdots \qquad \vdots \qquad \quad \vdots \qquad \vdots \quad \; \vdots \qquad \vdots\)</span><br />
+<span class="math inline">\(\quad T \qquad Y_T \qquad X_{T1} \quad X_{T2} \quad \cdots \quad X_{Tk}\)</span><br />
+</li>
+<li>这里多了一列时间，它的顺序必须是升序排列</li>
 </ul>
+</div>
+<div class="section level2">
+<h2>时间序列的成分</h2>
+<div class="section level3">
+<h3>四个成分</h3>
+<ol style="list-style-type: decimal">
+<li>趋势成分：<br />
+最慢的成分，我们的问题是：这个趋势是上升的还是下降的？
+<ul>
+<li>最慢、长期、平滑</li>
+<li>趋势通常来自总体的增长、变化、技术性的改变等等。</li>
+<li>趋势可以随着时间或者在一段时间内，上升或下降。</li>
+</ul></li>
+<li>周期成分： 不规则波浪形行的模式可以出现在不同的时间间隔，并且每次出现都不一样。
+<ul>
+<li>第二慢，周期性的，一系列波浪形的</li>
+<li>循环的波长和振幅既不固定也无法预测，所以是不规则的模式</li>
+<li>很多时间序列的周期性行为主要来自商业周期 注：如果趋势成分允许非线性，则很难区分趋势成分和周期（循环）成分，这样他们就可以合并成一个趋势成分。</li>
+</ul></li>
+<li>季节成分： 规则重复的模式，有固定长度的时间间隔，例如周年或者月。</li>
+<li>随机成分(余数)<br />
+无法预测的随机变化 <em>denote: 很难区分趋势和循环成分，下面一律将它们合并成趋势成分</em></li>
+</ol>
+</div>
+<div id="section" class="section level3">
+<h3></h3>
+<p>在为时间序列数据建模的时候，分解成四个成分可以帮助理解和量化数据随时间的变化 例如：我们的模型可以如下：<br />
+<span class="math display">\[Y_t = T_t + C_t + S_T + R_t\]</span> * 我们可以将这几个成分重新合并成一个新模型来做预测，但这不是理想的方法。</p>
 <p>
 季节性和循环的区别<a href="time-series.html">时间序列</a>。
 </p>
@@ -277,6 +319,7 @@ div.tocify {
 <li>季节性是有相等间隔的有规律重复的模型。</li>
 </ul></li>
 </ul>
+</div>
 </div>
 </div>
 
