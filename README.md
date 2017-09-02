@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## System Administration
+[MSSQL2016 install and connect from another computer](Server-Side/MSSQL2016.md)
 
-You can use the [editor on GitHub](https://github.com/CK-SmartScreen/statistic/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 统计学
+[公式](Experience/formula.html)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 统计学笔记
+[统计学笔记](s20x/Notebook.html)
 
-### Markdown
+### 社交网络分析
+[社交网络分析](Data_Mining/SocialNetwork.html)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/CK-SmartScreen/statistic/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Authors and Contributors
+[智屏互动科技](http://www.smartscreen.com.cn)
 
 ### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages? Check out our [documentation](https://help.github.com/pages) or [contact support](https://github.com/contact) and we’ll help you sort it out.
