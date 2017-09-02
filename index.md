@@ -1,3 +1,6 @@
+## System Administration
+[MSSQL2016 install and connect from another computer](Server-Side/MSSQL2016.md)
+
 ### 统计学
 [公式](Experience/formula.html)
 
@@ -6,7 +9,6 @@
 
 ### 社交网络分析
 [社交网络分析](Data_Mining/SocialNetwork.html)
-
 
 ### Authors and Contributors
 [智屏互动科技](http://www.smartscreen.com.cn)
