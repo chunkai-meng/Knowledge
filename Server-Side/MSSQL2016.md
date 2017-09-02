@@ -44,6 +44,6 @@ open **appsettings.json** edit:
 "ConnectionStrings": {
   //"defaultConnection": "Server=(localdb)\\mssqllocaldb;Database=ContosoUniversity3;Trusted_Connection=True;MultipleActiveResultSets=true"
   "DefaultConnection": "Server=192.168.20.2;Database=ContosoUniversity;user id=CK;password=xxxxxx"
-	},
+},
 ```
 Then you can have your own SQL SVR for use as a development.
