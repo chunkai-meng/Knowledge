@@ -2,7 +2,7 @@ title: CK的知识库
 description: I'm trying to merge my Knowledge to github, this is a good way to organise it and the output process is good for memorization. 
 google_analytics:
 show_downloads: false
-theme: jekyll-theme-minimal
+theme: jekyll-theme-dinky
 
 gems:
   - jekyll-mentions
