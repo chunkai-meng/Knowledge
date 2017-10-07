@@ -1,7 +1,7 @@
 # Mac Docker 创建第一个Django 应用，Part 1
 ## 第一步：在Mac构建Django 容器
 
-> 原文：[Quickstart: Compose and Django]("https://docs.docker.com/compose/django/#create-a-django-project")  
+> 原文：[Quickstart: Compose and Django](https://docs.docker.com/compose/django/#create-a-django-project)  
 > 翻译整理：CK
 
 这篇文章将指导你如何用Docker Compose 配置和启动一个简单的 Django + PostgreSQL 应用。请先确保您已安装Compose：
