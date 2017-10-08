@@ -22,7 +22,7 @@ My first name is {{ first_name }}. My last name is {{ last_name }}.
 
 ## 标记
 标记为渲染过程提供任意的逻辑
-**{% csrf\_token %}**
+**{% c s r f\_token %}**
 
 设计者有意模糊了它的定义，例如它可以输出内容，也可以像个控制结构，例如：if语句，for循环，从数据库提取数据，甚至可以接入到其他模版标记.
 
