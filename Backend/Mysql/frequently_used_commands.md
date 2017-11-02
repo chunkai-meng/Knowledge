@@ -8,4 +8,7 @@ truncate table hats;
 
 # SHOW COLUMNS
 SHOW COLUMNS FROM mytable
+
+# Alter column name
+ALTER TABLE `Users` CHANGE COLUMN `UserName` `Name` VARCHAR(255) NOT NULL;
 ```
