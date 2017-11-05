@@ -2,6 +2,8 @@
 
 ```SQL
 UPDATE `database_name`.`table_name` SET `column_name`='value' WHERE `id`='1';
+# e.g.
+UPDATE Hats SET Price=12.9 WHERE `id`='3';
 
 # Delete all rows in a table
 truncate table hats;
