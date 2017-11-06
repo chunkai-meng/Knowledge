@@ -13,4 +13,7 @@ SHOW COLUMNS FROM mytable
 
 # Alter column name
 ALTER TABLE `Users` CHANGE COLUMN `UserName` `Name` VARCHAR(255) NOT NULL;
+
+# Add a column
+ALTER TABLE `orders` ADD `Status` ENUM('Submitted','Shipped','Delivered') NULL AFTER `ID`;
 ```
