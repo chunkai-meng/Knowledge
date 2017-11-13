@@ -159,7 +159,7 @@ def detail(request, question_id):
 ```
 ### 6. 去掉模版中的URL固定代码
 修改**polls/index.html**
-```
+```html
 <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
 ```
 因为这是紧耦合的做法（当你修改项目的URL的时候，还需要去改动模版），可以使用模版标记来去掉模版对特定URL路径的依赖，改为：

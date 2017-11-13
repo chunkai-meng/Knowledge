@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Chunkai's Knowledge Repository
 
 ## BACKEND
